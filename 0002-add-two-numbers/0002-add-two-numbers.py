@@ -4,56 +4,42 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        result_list = []
-        carry = 0
-        while l1 and l2:
-            sum = 0
-            if carry == 1:
-                sum = 1 + l1.val + l2.val
-                carry = 0
-            else:
-                sum = l1.val + l2.val
+    # 연결 리스트 뒤집기
+    def reverseList(self, head: ListNode) -> ListNode:
+        node, prev = head, None
 
-            if sum >= 10:
-                result_list.append(sum - 10)
-                carry = 1
-            else:
-                result_list.append(sum)
+        while node:
+            next, node.next = node.next, prev
+            prev, node = node, next
 
-            while l1.next is None and l2.next is not None:
-                l2 = l2.next
-                sum = l2.val + 0 + carry
-                if sum >= 10:
-                    result_list.append(sum - 10)
-                    carry = 1
-                else:
-                    result_list.append(sum)
-                    carry = 0
+        return prev
 
-            while l2.next is None and l1.next is not None:
-                    l1 = l1.next
-                    sum = l1.val + 0 + carry
-                    if sum >= 10:
-                        result_list.append(sum - 10)
-                        carry = 1
-                    else:
-                        result_list.append(sum)
-                        carry = 0
+    # 연결 리스트를 파이썬 리스트로 변환:
+    def toList(self, node:ListNode) -> List:
+        list:List = []
+        while node:
+            list.append(node.val)
+            node = node.next
+        return list
 
-            l1 = l1.next
-            l2 = l2.next
+    # 결과를 연결 리스트로 변환
+    def toReversedLinkedList(self, result: str):
+        prev: ListNode = None
+        for r in result:
+            node = ListNode(r)
+            node.next = prev
+            prev = node
+        return node
 
-        if carry == 1:
-            result_list.append(1)
-    
-        result = ListNode(-1)
-        cursor = result
-        for num in result_list:
-            cursor.next = ListNode(num)
-            cursor = cursor.next
-        
-        return result.next
+    def addTwoNumbers(self, l1: Optional[ListNode],
+                      l2: Optional[ListNode]) -> Optional[ListNode]:
+        a = self.toList(self.reverseList(l1))
+        b = self.toList(self.reverseList(l2))
+
+        resultStr = int(''.join(str(e) for e in a)) + \
+                    int(''.join(str(e) for e in b))
+
+        return self.toReversedLinkedList(str(resultStr))
         
         
         
