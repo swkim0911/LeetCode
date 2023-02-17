@@ -7,33 +7,16 @@ class Solution:
     def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         
         if head is None:
-            return head
-        prev = head
-        cursor = head.next
-        count = 0
+            return None
+        
+        odd = head
+        even_head = even = head.next
 
-        while cursor and cursor.next:
-            b = cursor.next
-            prev.next = b
-            cursor.next = b.next
-            b.next = cursor
+        while even and even.next:
+            odd.next, even.next = odd.next.next, even.next.next
+            odd, even = odd.next, even.next
 
-            if count:
-                tmp = head
-                for _ in range(count):
-                    tmp = tmp.next
-
-                e = tmp.next
-                tmp.next = b
-                b.next = e
-                prev.next = cursor
-                prev = prev.next
-
-            else:
-                prev = prev.next.next
-            cursor = cursor.next
-
-            count = count + 1
+        odd.next = even_head
 
         return head
         
