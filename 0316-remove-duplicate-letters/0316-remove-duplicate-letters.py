@@ -10,7 +10,7 @@ class Solution:
             if char in seen:
                 continue
             
-            # char가 stack 맨 위 문자보다 앞에 있고 stack 맨 위 문자가 나중에 더 나올 수 있따면 pop
+            # char가 stack 맨 위 문자보다 앞에 있고 stack 맨 위 문자가 나중에 더 나올 수 있다면 pop
             while stack and char < stack[-1] and collection[stack[-1]] > 0:
                 seen.remove(stack.pop())
 
