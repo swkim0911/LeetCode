@@ -5,19 +5,38 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        head = cursor = ListNode(-1)
-        tmp_list = []
+        root = result = ListNode(None)
+        heap =[]
 
-        for node in lists:
-            while node:
-                tmp_list.append(node.val)
-                node = node.next
+        #각 연결 리스트의 루트를 힙에 저장
+        for i in range(len(lists)):
+            if lists[i]:
+                heapq.heappush(heap, (lists[i].val, i, lists[i]))
 
-        tmp_list.sort()
+        #힙 추출 이후 다음 노드는 다시 저장
+        while heap:
+            node = heapq.heappop(heap)
+            idx = node[1]
+            result.next = node[2]
 
-        for node in tmp_list:
-            cursor.next = ListNode(node)
-            cursor = cursor.next
+            result = result.next
+            if result.next:
+                heapq.heappush(heap, (result.next.val, idx, result.next))
 
-        return head.next
+        return root.next
+        # head = cursor = ListNode(-1)
+        # tmp_list = []
+        #
+        # for node in lists:
+        #     while node:
+        #         tmp_list.append(node.val)
+        #         node = node.next
+        #
+        # tmp_list.sort()
+        #
+        # for node in tmp_list:
+        #     cursor.next = ListNode(node)
+        #     cursor = cursor.next
+        #
+        # return head.next
         
