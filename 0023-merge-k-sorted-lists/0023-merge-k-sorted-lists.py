@@ -24,6 +24,8 @@ class Solution:
                 heapq.heappush(heap, (result.next.val, idx, result.next))
 
         return root.next
+    
+        # 내 풀이
         # head = cursor = ListNode(-1)
         # tmp_list = []
         #
