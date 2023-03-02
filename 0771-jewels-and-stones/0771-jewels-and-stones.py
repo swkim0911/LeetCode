@@ -6,8 +6,8 @@ class Solution:
         for char in stones:
             dict[char] += 1
 
-        for key in dict.keys():
-            if key in jewels:
-                result += dict.get(key)
-
+        for jewel in jewels:
+            if jewel in dict:
+                result += dict[jewel]
+                
         return result
