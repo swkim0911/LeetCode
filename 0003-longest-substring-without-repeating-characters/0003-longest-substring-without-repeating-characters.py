@@ -3,7 +3,8 @@ class Solution:
         used = {}
         max_length = start = 0
         for index, char in enumerate(s):
-            # 문자가 이미 등장했고 윈도우 안에 그 문자가 있으면(이미 등장했어도 현재 윈도우 안에 없을 수도 있다. 이 경우, 윈도우에는 없으므로 윈도우에 추가해도 된다.)
+            # 윈도우 안에 현재 char가 있는지 확인해야 하는데 확인할 때 윈도우 전체를 (loop를 돌면서) 보는게 아니라 used에 있고 start가 used[char]이전에 있음이 동치가 되어
+            # 이 조건문으로 찾는다.
             if char in used and start <= used[char]:
                 start = used[char] + 1
             else: # 최대 부분 문자열 길이 갱신
