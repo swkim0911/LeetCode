@@ -34,6 +34,7 @@
 | ------- |
 | [0014-longest-common-prefix](https://github.com/swkim0911/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0020-valid-parentheses](https://github.com/swkim0911/LeetCode/tree/master/0020-valid-parentheses) |
+| [0242-valid-anagram](https://github.com/swkim0911/LeetCode/tree/master/0242-valid-anagram) |
 ## Trie
 |  |
 | ------- |
@@ -59,4 +60,12 @@
 |  |
 | ------- |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/swkim0911/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
+## Hash Table
+|  |
+| ------- |
+| [0242-valid-anagram](https://github.com/swkim0911/LeetCode/tree/master/0242-valid-anagram) |
+## Sorting
+|  |
+| ------- |
+| [0242-valid-anagram](https://github.com/swkim0911/LeetCode/tree/master/0242-valid-anagram) |
 <!---LeetCode Topics End-->
