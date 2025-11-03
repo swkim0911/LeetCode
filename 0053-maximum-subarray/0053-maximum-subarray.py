@@ -1,22 +1,38 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-
-        for i in range(1, len(nums)):
-            nums[i] = max(nums[i-1] + nums[i], nums[i])
         
-        return max(nums)
+        def find_max_subarray(nums, left, right):
+            # 기저 조건: 하나의 원소만 남았을 때
+            if left == right:
+                return nums[left]
+            
+            mid = (left + right) // 2
 
-# 문제 정의: nums 배열 안에서 부분 배열 중에 합이 최대가 되는 값을 찾아야 한다.
-# 풀이: 누적합 배열을 만들고 그 누적합 배열로 모든 경우의 수를 찾을 수 있다. 하지만 시간복잡도가 O(N^2)이다.
-# 문제에서 N의 크기가 최대 10^5이니까 이러면 time-out이 발생한다.
-# 그래서 DP로 문제를 풀 수 있다.
-# DP[x]: x index까지 봤을 때 얻을 수 있는 부분 배열의 최댓값이다.
-# 점화식은 DP[x] = max(nums[x], DP[x-1] + nums[x]) 가 될 수 있다.
-# DP[x-1]은 x-1까지 봤을 때 부분 배열의 최댓값이며, DP[x-1]에 x위치의 nums[x]를 더하는 것과 nums[x]의 값을 비교해서 더 값이 큰 것이 DP[x]가 된다.
-# 여기서 DP[x-1] 값이 인덱스 x-1 위치의 원소를 포함하지 않는데도 nums[x]를 더하는 것이 연속된 부분 배열의 합이 될 수 있을지 의문이 들 수 있다.
+            # 왼쪽, 오른쪽, 중앙을 가로지르는 최대 부분합 계산
+            left_max = find_max_subarray(nums, left, mid)
+            right_max = find_max_subarray(nums, mid + 1, right)
+            cross_max = find_cross_sum(nums, left, mid, right)
 
-# 만약 DP[x-1]이 -1이고 nums[x] = 5라면, DP[x] = max(5, -1 + 5) = 5가 되어 DP[x]는 nums[x]를 포함한다.
-# 또한 DP[x-1] = 3, nums[x] = 5일 경우, DP[x] = max(5, 3 + 5) = 8이 되어 역시 nums[x]를 포함하게 된다.
+            # 세 경우 중 최댓값 반환
+            return max(left_max, right_max, cross_max)
 
-# 따라서 어떤 경우에도 DP[x]는 항상 nums[x]를 포함하며, 이는 DP[x-1]이 인덱스 x-1을 포함하고 있음을 의미한다.
-# 결국 DP[x]는 “인덱스 x를 반드시 포함하는 연속 부분 배열의 최댓값”을 나타낸다.
+        def find_cross_sum(nums, left, mid, right):
+            # 왼쪽 끝부분에서 mid까지의 최대 부분합
+            left_sum = float('-inf')
+            cur = 0
+            for i in range(mid, left - 1, -1):  # mid → left 방향으로 이동
+                cur += nums[i]
+                left_sum = max(left_sum, cur)
+
+            # 오른쪽 시작부분에서 mid+1 → right까지의 최대 부분합
+            right_sum = float('-inf')
+            cur = 0
+            for i in range(mid + 1, right + 1):  # mid+1 → right 방향으로 이동
+                cur += nums[i]
+                right_sum = max(right_sum, cur)
+
+            # 중앙을 가로지르는 합 = 왼쪽 + 오른쪽
+            return left_sum + right_sum
+
+        # 초기 호출
+        return find_max_subarray(nums, 0, len(nums) - 1)
