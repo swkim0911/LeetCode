@@ -45,6 +45,7 @@
 | [0014-longest-common-prefix](https://github.com/swkim0911/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0020-valid-parentheses](https://github.com/swkim0911/LeetCode/tree/master/0020-valid-parentheses) |
 | [0242-valid-anagram](https://github.com/swkim0911/LeetCode/tree/master/0242-valid-anagram) |
+| [0383-ransom-note](https://github.com/swkim0911/LeetCode/tree/master/0383-ransom-note) |
 ## Trie
 |  |
 | ------- |
@@ -78,6 +79,7 @@
 | ------- |
 | [0141-linked-list-cycle](https://github.com/swkim0911/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0242-valid-anagram](https://github.com/swkim0911/LeetCode/tree/master/0242-valid-anagram) |
+| [0383-ransom-note](https://github.com/swkim0911/LeetCode/tree/master/0383-ransom-note) |
 ## Sorting
 |  |
 | ------- |
@@ -107,4 +109,8 @@
 |  |
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/swkim0911/LeetCode/tree/master/0232-implement-queue-using-stacks) |
+## Counting
+|  |
+| ------- |
+| [0383-ransom-note](https://github.com/swkim0911/LeetCode/tree/master/0383-ransom-note) |
 <!---LeetCode Topics End-->
