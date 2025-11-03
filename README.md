@@ -84,6 +84,7 @@
 ## Binary Search
 |  |
 | ------- |
+| [0278-first-bad-version](https://github.com/swkim0911/LeetCode/tree/master/0278-first-bad-version) |
 | [0792-binary-search](https://github.com/swkim0911/LeetCode/tree/master/0792-binary-search) |
 ## Matrix
 |  |
@@ -93,4 +94,8 @@
 |  |
 | ------- |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/swkim0911/LeetCode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
+## Interactive
+|  |
+| ------- |
+| [0278-first-bad-version](https://github.com/swkim0911/LeetCode/tree/master/0278-first-bad-version) |
 <!---LeetCode Topics End-->
