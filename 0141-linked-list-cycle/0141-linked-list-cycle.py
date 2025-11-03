@@ -8,7 +8,7 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         
         slow, fast = head, head
-        while slow and fast and fast.next:
+        while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
 
