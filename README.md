@@ -43,6 +43,7 @@
 | [0542-01-matrix](https://github.com/swkim0911/LeetCode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/swkim0911/LeetCode/tree/master/0733-flood-fill) |
 | [0792-binary-search](https://github.com/swkim0911/LeetCode/tree/master/0792-binary-search) |
+| [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 ## String
 |  |
 | ------- |
@@ -96,6 +97,7 @@
 |  |
 | ------- |
 | [0242-valid-anagram](https://github.com/swkim0911/LeetCode/tree/master/0242-valid-anagram) |
+| [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 ## Binary Search
 |  |
 | ------- |
@@ -130,11 +132,13 @@
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/swkim0911/LeetCode/tree/master/0053-maximum-subarray) |
+| [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 ## Math
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/swkim0911/LeetCode/tree/master/0067-add-binary) |
 | [0070-climbing-stairs](https://github.com/swkim0911/LeetCode/tree/master/0070-climbing-stairs) |
+| [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 ## Memoization
 |  |
 | ------- |
@@ -151,4 +155,16 @@
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/swkim0911/LeetCode/tree/master/0067-add-binary) |
+## Geometry
+|  |
+| ------- |
+| [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
+## Quickselect
+|  |
+| ------- |
+| [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 <!---LeetCode Topics End-->
