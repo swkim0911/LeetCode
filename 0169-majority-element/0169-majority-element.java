@@ -2,20 +2,20 @@ import java.util.*;
 
 class Solution {
     public int majorityElement(int[] nums) {
-        HashMap<Integer, Integer> numToCntMap = new HashMap<>();
+        int candidate = 0;
+        int count = 0;
+
         for(int num : nums){
-            numToCntMap.put(num,  numToCntMap.getOrDefault(num, 0) + 1);
-        }
-        int maxCnt = 0;
-        int answer = 0;
-        for(Map.Entry<Integer, Integer> entry : numToCntMap.entrySet()){
-            if(maxCnt < entry.getValue()){
-                answer = entry.getKey();
-                maxCnt = entry.getValue();
+            if(count == 0){
+                candidate = num;
             }
+            count += (candidate == num ? 1 : -1); 
         }
 
-        return answer;
+        return candidate;
+
+
+
     }
 }
 
