@@ -40,6 +40,7 @@
 | [0053-maximum-subarray](https://github.com/swkim0911/LeetCode/tree/master/0053-maximum-subarray) |
 | [0057-insert-interval](https://github.com/swkim0911/LeetCode/tree/master/0057-insert-interval) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/swkim0911/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0169-majority-element](https://github.com/swkim0911/LeetCode/tree/master/0169-majority-element) |
 | [0542-01-matrix](https://github.com/swkim0911/LeetCode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/swkim0911/LeetCode/tree/master/0733-flood-fill) |
 | [0792-binary-search](https://github.com/swkim0911/LeetCode/tree/master/0792-binary-search) |
@@ -90,12 +91,14 @@
 |  |
 | ------- |
 | [0141-linked-list-cycle](https://github.com/swkim0911/LeetCode/tree/master/0141-linked-list-cycle) |
+| [0169-majority-element](https://github.com/swkim0911/LeetCode/tree/master/0169-majority-element) |
 | [0242-valid-anagram](https://github.com/swkim0911/LeetCode/tree/master/0242-valid-anagram) |
 | [0383-ransom-note](https://github.com/swkim0911/LeetCode/tree/master/0383-ransom-note) |
 | [0409-longest-palindrome](https://github.com/swkim0911/LeetCode/tree/master/0409-longest-palindrome) |
 ## Sorting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/swkim0911/LeetCode/tree/master/0169-majority-element) |
 | [0242-valid-anagram](https://github.com/swkim0911/LeetCode/tree/master/0242-valid-anagram) |
 | [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 ## Binary Search
@@ -127,11 +130,13 @@
 ## Counting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/swkim0911/LeetCode/tree/master/0169-majority-element) |
 | [0383-ransom-note](https://github.com/swkim0911/LeetCode/tree/master/0383-ransom-note) |
 ## Divide and Conquer
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/swkim0911/LeetCode/tree/master/0053-maximum-subarray) |
+| [0169-majority-element](https://github.com/swkim0911/LeetCode/tree/master/0169-majority-element) |
 | [1014-k-closest-points-to-origin](https://github.com/swkim0911/LeetCode/tree/master/1014-k-closest-points-to-origin) |
 ## Math
 |  |
