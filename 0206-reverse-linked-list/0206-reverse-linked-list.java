@@ -8,26 +8,23 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-import java.util.*;
-
 class Solution {
     public ListNode reverseList(ListNode head) {
-        if(head == null) return head;
-        Stack<Integer> stack = new Stack<>();
-        ListNode cur = head;
-        stack.push(cur.val);
-        while(cur.next != null && cur.next != head){ // recursion을 고려했을 떄.
-            cur = cur.next;
-            stack.push(cur.val);
+        ListNode prev = null;
+
+        while(head != null){
+            ListNode nxt = head.next;
+            head.next = prev;
+
+            prev = head;
+            head = nxt;
         }
-        ListNode reversedListHead = new ListNode(stack.pop());
-        ListNode reversedListcur = reversedListHead;
-        while(!stack.isEmpty()){
-            reversedListcur.next = new ListNode(stack.pop());
-            reversedListcur = reversedListcur.next;
-        }
-        return reversedListHead;
+
+        return prev;
+
+
+
     }
 }
-// 문제 정의: 싱글 링크드 리스트의 헤드가 주어졌을 떄, 뒤집힌 리스트를 반환한다.
-// 해결: 
+// 문제 정의: 단일 연결 리스트의 헤드가 주어졌을 때, 뒤집힌 리스트를 반환한다.
+// 문제 해결: 각 노드를 순회하면서 이전 노드를 기억해서, 현재 노드가 이전 노드를 가리킨다.
