@@ -7,7 +7,7 @@ class Solution {
         List<List<Integer>> answer = new ArrayList<>();
 
         for (int i = 0; i < n - 2; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) continue; // 중복 제거
+            if (i > 0 && nums[i] == nums[i - 1]) continue; // 중복 제거 (정렬되어 있기 때문에 nums[i-1]에서 만든 조합에 nums[i]에서 만드는 조합이 포함된다.)
 
             int left = i + 1;
             int right = n - 1;
